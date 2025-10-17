@@ -1,0 +1,19 @@
+{
+  "name": "talk-to-data-ai",
+  "version": "1.0.0",
+  "description": "Natural Language Database Query System",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && python main.py",
+    "frontend": "cd frontend && npm run dev -- --force",
+    "install-all": "npm install && cd frontend && npm install",
+    "setup": "npm run install-all && echo 'Setup complete! Run npm run dev to start both servers'",
+    "test-db": "python setup_test_db.py"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["database", "nlp", "openai", "postgresql", "visualization"],
+  "author": "Your Name",
+  "license": "MIT"
+}
